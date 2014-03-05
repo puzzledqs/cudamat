@@ -29,7 +29,6 @@ DLLEXPORT extern const char* get_last_cuda_error() {
 }
 
 DLLEXPORT extern int cublas_init() {
-	printf("cudamat: cublasInit()\n");
     cublasInit();
     if (check_cublas_error())
         return CUBLAS_ERROR;
@@ -38,7 +37,6 @@ DLLEXPORT extern int cublas_init() {
 }
 
 DLLEXPORT extern int cublas_shutdown() {
-	printf("cudamat: cublasShutdown()\n");
     cublasShutdown();
     cudaThreadExit();
 
